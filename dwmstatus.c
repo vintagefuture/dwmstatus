@@ -20,6 +20,7 @@
 char *tzargentina = "America/Buenos_Aires";
 char *tzutc = "UTC";
 char *tzberlin = "Europe/Berlin";
+char *tzlondon = "Europe/London";
 
 static Display *dpy;
 
@@ -198,7 +199,7 @@ main(void)
 		bat1 = getbattery("/sys/class/power_supply/BAT1");
 		tmar = mktimes("%H:%M", tzargentina);
 		tmutc = mktimes("%H:%M", tzutc);
-		tmbln = mktimes("KW %W %a %d %b %H:%M %Z %Y", tzberlin);
+		tmbln = mktimes("KW %W %a %d %b %H:%M %Z %Y", tzlondon);
 		t0 = gettemperature("/sys/devices/virtual/hwmon/hwmon0", "temp1_input");
 		t1 = gettemperature("/sys/devices/virtual/hwmon/hwmon2", "temp1_input");
 		t2 = gettemperature("/sys/devices/virtual/hwmon/hwmon4", "temp1_input");
